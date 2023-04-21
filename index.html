@@ -11,26 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="grid-container">
+    <main id="main-doc" class="grid-container">
         <nav id="navbar">
             <header>JS Documentation</header>
             <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12L7 7m5 5l5 5m-5-5l5-5m-5 5l-5 5"/></svg>
             <div class="side-menu">
                 <ul>
-                    <li><a class="nav-link" href="#arrays">Arrays</a></li>
-                    <li><a class="nav-link" href="#pop">Pop()</a></li>
-                    <li><a class="nav-link" href="#push">Push()</a></li>
-                    <li><a class="nav-link" href="#shift">Shift()</a></li>
-                    <li><a class="nav-link" href="#unshift">Unshift()</a></li>
-                    <li><a class="nav-link" href="#other_methods">Other methods</a></li>
-                    <li><a class="nav-link" href="#reference">Reference</a></li>
+                    <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+                    <li><a class="nav-link" href="#Pop()">Pop()</a></li>
+                    <li><a class="nav-link" href="#Push()">Push()</a></li>
+                    <li><a class="nav-link" href="#Shift()">Shift()</a></li>
+                    <li><a class="nav-link" href="#Unshift()">Unshift()</a></li>
+                    <li><a class="nav-link" href="#Other_methods">Other methods</a></li>
+                    <li><a class="nav-link" href="#Reference">Reference</a></li>
                 </ul>
                 <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 18q-.425 0-.713-.288T3 17q0-.425.288-.713T4 16h16q.425 0 .713.288T21 17q0 .425-.288.713T20 18H4Zm0-5q-.425 0-.713-.288T3 12q0-.425.288-.713T4 11h16q.425 0 .713.288T21 12q0 .425-.288.713T20 13H4Zm0-5q-.425 0-.713-.288T3 7q0-.425.288-.713T4 6h16q.425 0 .713.288T21 7q0 .425-.288.713T20 8H4Z"/></svg>
             </div>
             
         </nav>
         <div class="wrapper">
-            <section id="arrays" class="main-section">
+            <section id="Arrays" class="main-section">
                 <header>Arrays</header>
                 <article>
                     <p>The Array object, as with arrays in other programming languages, enables storing a collection of multiple items under a single variable name.</p>
@@ -43,7 +43,7 @@
                     </code>
                 </article>
             </section>
-            <section id="pop" class="main-section">
+            <section id="Pop()" class="main-section">
                 <header>Pop()</header>
                 <article>
                     <p>The pop() method removes the last element from an array and returns that value to the caller. If you call pop() on an empty array, it returns undefined.</p>
@@ -57,7 +57,7 @@
                     <p>The pop() method is a mutating method. It changes the length and the content of this. In case you want the value of this to be the same, but return a new array with the last element removed, you can use arr.slice(0, -1) instead.</p>
                 </article>
             </section>
-            <section id="push" class="main-section">
+            <section id="Push()" class="main-section">
                 <header>Push()</header>
                 <article>
                     <p>The push() method adds the specified elements to the end of an array and returns the new length of the array. </p>
@@ -71,7 +71,7 @@
                     <p>The push() method is a mutating method. It changes the length and the content of this. In case you want the value of this to be the same, but return a new array with elements appended to the end, you can use arr.concat([element0, element1, /* ... ,*/ elementN]) instead. Notice that the elements are wrapped in an extra array — otherwise, if the element is an array itself, it would be spread instead of pushed as a single element due to the behavior of concat().</p>
                 </article>
             </section>
-            <section id="shift" class="main-section">
+            <section id="Shift()" class="main-section">
                 <header>Shift()</header>
                 <article>
                     <p>The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.</p>
@@ -85,7 +85,7 @@
                     <p>The shift() method is a mutating method. It changes the length and the content of this. In case you want the value of this to be the same, but return a new array with the first element removed, you can use arr.slice(1) instead.</p>
                 </article>
             </section>
-            <section id="unshift" class="main-section">
+            <section id="Unshift()" class="main-section">
                 <header>Unshift()</header>
                 <article>
                     <p>The unshift() method adds the specified elements to the beginning of an array and returns the new length of the array.</p>
@@ -99,7 +99,7 @@
                     <p>Please note that, if multiple elements are passed as parameters, they're inserted in chunk at the beginning of the object, in the exact same order they were passed as parameters. Hence, calling unshift() with n arguments once, or calling it n times with 1 argument (with a loop, for example), don't yield the same results. </p>
                 </article>
             </section>
-            <section id="other_methods" class="main-section">
+            <section id="Other_methods" class="main-section">
                 <header>Other methods</header>
                 <article>
                     <p>Other useful methods include:</p>
@@ -112,14 +112,14 @@
                     </ul>
                 </article>
             </section>
-            <section id="reference" class="main-section">
+            <section id="Reference" class="main-section">
                 <header>Reference</header>
                 <article>
                     <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN</a></p>
                 </article>
             </section>
         </div>
-    </div>
+    </main>
     
     
     <script src="app.js"></script>

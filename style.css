@@ -75,6 +75,7 @@ section header {
     width: var(--wrapper-width);
     max-width: 960px;
     margin-inline: auto;
+    
 }
 
 #navbar {
@@ -87,6 +88,10 @@ section header {
     position: sticky;
     top: 0;
     z-index: 1;
+    /* overflow-x: hidden; */
+    /* overflow-inline:clip; */
+    /* overflow-y: clip; */
+    /* overflow-x: auto; */
 }
 
 #navbar header {
@@ -120,9 +125,8 @@ section header {
 }
 
 #navbar ul {
-    display: flex;
+    display: none;
     flex-direction: column;
-    gap: var(--spacer-md);
     position: absolute;
     top: 0;
     right: 0;
@@ -135,6 +139,7 @@ section header {
 }
 
 #navbar ul.show {
+    display: flex;
     transform: translateX(0%);
 }
 
