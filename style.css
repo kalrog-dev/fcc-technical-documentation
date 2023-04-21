@@ -217,6 +217,7 @@ section ul {
     #navbar ul {
         display: block;
         width: 100%;
+        height: auto;
         background-color: var(--clr-light-dark);
         color: var(--clr-dark);
         padding: 0;
