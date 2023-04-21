@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid-container">
+        <nav id="navbar">
+            <header>JS Documentation</header>
+            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 18q-.425 0-.713-.288T3 17q0-.425.288-.713T4 16h16q.425 0 .713.288T21 17q0 .425-.288.713T20 18H4Zm0-5q-.425 0-.713-.288T3 12q0-.425.288-.713T4 11h16q.425 0 .713.288T21 12q0 .425-.288.713T20 13H4Zm0-5q-.425 0-.713-.288T3 7q0-.425.288-.713T4 6h16q.425 0 .713.288T21 7q0 .425-.288.713T20 8H4Z"/></svg>
+            <ul>
+                <li><a class="nav-link" href="#arrays">Arrays</a></li>
+                <li><a class="nav-link" href="#pop">Pop()</a></li>
+                <li><a class="nav-link" href="#push">Push()</a></li>
+                <li><a class="nav-link" href="#shift">Shift()</a></li>
+                <li><a class="nav-link" href="#unshift">Unshift()</a></li>
+                <li><a class="nav-link" href="#other_methods">Other methods</a></li>
+                <li><a class="nav-link" href="#reference">Reference</a></li>
+            </ul>
+        </nav>
+        <div class="wrapper">
+            <section id="javascript_array_methods" class="main-section">
+                <header>Arrays</header>
+                <article>
+                    <p>The Array object, as with arrays in other programming languages, enables storing a collection of multiple items under a single variable name.</p>
+                    <p>The length data property of an Array instance represents the number of elements in that array. The push() method results in updates to an array's length property.</p>
+                    <code>
+                        <span>const fruits = [];</span>
+                        <span>fruits.push("banana", "apple", "peach");</span>
+                        <span>console.log(fruits.length);</span>
+                        <span class="output">// &#8594; 3</span>
+                    </code>
+                </article>
+            </section>
+            <section id="pop" class="main-section">
+                <header>Pop()</header>
+                <article>
+                    <p>The pop() method removes the last element from an array and returns that value to the caller. If you call pop() on an empty array, it returns undefined.</p>
+                    <code>
+                        <span>const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];</span>
+                        <span>plants.pop();</span>
+                        <span>console.log(plants);</span>
+                        <span class="output">// &#8594; Array ["broccoli", "cauliflower", "cabbage", "kale"]</span>
+                    </code>
+                    <p>Array.shift() has similar behavior to pop(), but applied to the first element in an array.</p>
+                    <p>The pop() method is a mutating method. It changes the length and the content of this. In case you want the value of this to be the same, but return a new array with the last element removed, you can use arr.slice(0, -1) instead.</p>
+                </article>
+            </section>
+            <section id="push" class="main-section">
+                <header>Push()</header>
+                <article>
+                    <p>The push() method adds the specified elements to the end of an array and returns the new length of the array. </p>
+                    <code>
+                        <span>const animals = ['pigs', 'goats', 'sheep'];</span>
+                        <span>const count = animals.push('cows');</span>
+                        <span>console.log(animals);</span>
+                        <span class="output">// &#8594; Array ["pigs", "goats", "sheep", "cows"]</span>
+                    </code>
+                    <p>Array.unshift() has similar behavior to push(), but applied to the start of an array.</p>
+                    <p>The push() method is a mutating method. It changes the length and the content of this. In case you want the value of this to be the same, but return a new array with elements appended to the end, you can use arr.concat([element0, element1, /* ... ,*/ elementN]) instead. Notice that the elements are wrapped in an extra array — otherwise, if the element is an array itself, it would be spread instead of pushed as a single element due to the behavior of concat().</p>
+                </article>
+            </section>
+            <section id="shift" class="main-section">
+                <header>Shift()</header>
+                <article>
+                    <p>The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.</p>
+                    <code>
+                        <span>const arr = [1, 2, 3];</span>
+                        <span>arr.shift();</span>
+                        <span>console.log(arr);</span>
+                        <span class="output">// &#8594; Array [2, 3]</span>
+                    </code>
+                    <p>The pop() method has similar behavior to shift(), but applied to the last element in an array.</p>
+                    <p>The shift() method is a mutating method. It changes the length and the content of this. In case you want the value of this to be the same, but return a new array with the first element removed, you can use arr.slice(1) instead.</p>
+                </article>
+            </section>
+            <section id="unshift" class="main-section">
+                <header>Unshift()</header>
+                <article>
+                    <p>The unshift() method adds the specified elements to the beginning of an array and returns the new length of the array.</p>
+                    <code>
+                        <span>const arr = [1, 2, 3];</span>
+                        <span>arr.unshift(4, 5);</span>
+                        <span>console.log(arr);</span>
+                        <span class="output">// &#8594; Array [4, 5, 1, 2, 3]</span>
+                    </code>
+                    <p>Array.push() has similar behavior to unshift(), but applied to the end of an array.</p>
+                    <p>Please note that, if multiple elements are passed as parameters, they're inserted in chunk at the beginning of the object, in the exact same order they were passed as parameters. Hence, calling unshift() with n arguments once, or calling it n times with 1 argument (with a loop, for example), don't yield the same results. </p>
+                </article>
+            </section>
+            <section id="other_methods" class="main-section">
+                <header>Other methods</header>
+                <article>
+                    <p>Other useful methods include:</p>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank" rel="noopener">filter()</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank" rel="noopener">map()</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank" rel="noopener">forEach()</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join" target="_blank" rel="noopener">join()</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank" rel="noopener">splice()</a></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="reference" class="main-section">
+                <header>Reference</header>
+                <article>
+                    <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN</a></p>
+                </article>
+            </section>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>
