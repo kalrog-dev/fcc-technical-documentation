@@ -30,9 +30,6 @@
     --spacer-md: 1.5em;
     --spacer-lg: 2em;
 
-    /* Shadow */
-    --shadow: 4px 4px 0px 25px rgb(0, 0, 0, 0.25);
-
     /* Wrapper */
     --wrapper-width: 90%;
 }
